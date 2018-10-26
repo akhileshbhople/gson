@@ -3,6 +3,11 @@ language: java
 jdk:
   - oraclejdk9
 
+matrix:
+  include:
+  - os: linux-ppc64le
+    jdk: openjdk8
+
 install: mvn -f gson install -DskipTests=true
 script: mvn -f gson test
 
